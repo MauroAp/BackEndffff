@@ -26,9 +26,9 @@ import org.springframework.http.HttpStatus;
  * @author Perez Mauro
  */
 
-@CrossOrigin(origins = "https://localhost:8080")
+@CrossOrigin(origins = "https://localhost:4200")
 @RestController
-@Transactional
+
 @RequestMapping("/proyectos")
 public class ProyectosController {
     

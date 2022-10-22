@@ -19,9 +19,9 @@ import org.springframework.web.bind.annotation.*;
  *
  * @author Perez Mauro
  */
-@CrossOrigin(origins = "https://localhost:8080")
+@CrossOrigin(origins = "https://localhost:4200")
 @RestController
-@Transactional
+
 @RequestMapping("/skills")
 public class SkillsController {
     

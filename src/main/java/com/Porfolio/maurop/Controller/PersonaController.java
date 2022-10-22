@@ -21,8 +21,8 @@ import org.springframework.web.bind.annotation.*;
  * @author Perez Mauro
  */
 @RestController
-@CrossOrigin(origins = "https://localhost:8080")
-@Transactional
+@CrossOrigin(origins = "https://localhost:4200")
+
 
 @RequestMapping("/persona")
 public class PersonaController {
