@@ -17,7 +17,8 @@ import lombok.Setter;
 import java.util.List; 
 
 
-@Getter @Setter
+@Getter 
+@Setter
 @Entity
 public class Persona {
     
@@ -56,10 +57,10 @@ public class Persona {
     @JoinColumn(name = "pr_fk", referencedColumnName = "id")
     private List<Proyectos> proyectosList; 
 
-    public Persona(){
+    public Persona() {
     }
-    public Persona(Long id, String nombre, String apellido, String telefono, String correo, String sobre_mi,String domicilio, String img, String titulo){
-        this.id = id;
+
+    public Persona(String nombre, String apellido, String telefono, String correo, String sobre_mi, String domicilio, String img, String titulo, List<Estudios> estudiosList, List<Experiencia> experienciaList, List<Skills> skillsList, List<Proyectos> proyectosList) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
@@ -68,80 +69,13 @@ public class Persona {
         this.domicilio = domicilio;
         this.img = img;
         this.titulo = titulo;
+        this.estudiosList = estudiosList;
+        this.experienciaList = experienciaList;
+        this.skillsList = skillsList;
+        this.proyectosList = proyectosList;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
-
-    public String getSobre_mi() {
-        return sobre_mi;
-    }
-
-    public void setSobre_mi(String sobre_mi) {
-        this.sobre_mi = sobre_mi;
-    }
-
-    public String getDomicilio() {
-        return domicilio;
-    }
-
-    public void setDomicilio(String domicilio) {
-        this.domicilio = domicilio;
-    }
-
-    public String getImg() {
-        return img;
-    }
-
-    public void setImg(String img) {
-        this.img = img;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
+   
 
 
     @Override

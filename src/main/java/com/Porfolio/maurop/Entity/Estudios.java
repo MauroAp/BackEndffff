@@ -13,8 +13,7 @@ import java.io.Serializable;
  * @author Perez Mauro
  */
 @Entity
-@Getter
-@Setter
+
 @Table(name = "estudios")
 public class Estudios implements Serializable {
 
@@ -28,11 +27,10 @@ public class Estudios implements Serializable {
     private String img;
     private String descripcion;
 
-    public Estudios(){
+    public Estudios() {
     }
 
-    public Estudios(Long id, String lugar, String fecha_inicio, String fecha_fin, String titulo, String img, String descripcion){
-        this.id = id;
+    public Estudios(String lugar, String fecha_inicio, String fecha_fin, String titulo, String img, String descripcion) {
         this.lugar = lugar;
         this.fecha_inicio = fecha_inicio;
         this.fecha_fin = fecha_fin;
@@ -97,6 +95,7 @@ public class Estudios implements Serializable {
         this.descripcion = descripcion;
     }
 
+    
     @Override
     public String toString(){
         return "Estudios {" +

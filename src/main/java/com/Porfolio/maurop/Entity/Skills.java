@@ -22,50 +22,18 @@ public class Skills {
     private Long id;
     private String skill;
     private Integer porcentaje;
-
     private String img;
 
-    public Skills(){}
+    public Skills() {
+    }
 
-    public Skills(Long id, String skill, Integer porcentaje, String img) {
-        this.id = id;
+    public Skills(String skill, Integer porcentaje, String img) {
         this.skill = skill;
         this.porcentaje = porcentaje;
         this.img = img;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getSkill() {
-        return skill;
-    }
-
-    public void setSkill(String skill) {
-        this.skill = skill;
-    }
-
-    public Integer getPorcentaje() {
-        return porcentaje;
-    }
-
-    public void setPorcentaje(Integer porcentaje) {
-        this.porcentaje = porcentaje;
-    }
-
-    public String getImg() {
-        return img;
-    }
-
-    public void setImg(String img) {
-        this.img = img;
-    }
-
+    
     @Override
     public String toString() {
         return "Skills{" +
